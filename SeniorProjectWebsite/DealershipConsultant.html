@@ -16,11 +16,22 @@
 		<script src="js/config.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
+		<script src="js/flexslider/js/jquery.flexslider.js"></script>
+		<link rel="stylesheet" href="js/flexslider/css/flexslider.css" />
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
+
+		<script>
+			$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				directionNav: true
+				});
+			});
+		</script>
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 	</head>
 	<body class="left-sidebar">
@@ -116,7 +127,29 @@
 												
 												<!-- Content -->
 													<article class="box is-post">
-														<a class="image image-full"><img src="images/ConsultantScreenshots/DCLogo.jpg" alt="" /></a>
+														<a class="image image-full">
+															<div class="flexslider">
+														<ul class="slides">
+															<li>
+																<img src="images/ConsultantScreenshots/LgInP.png"/>
+															</li>
+															<li>
+																<img src="images/ConsultantScreenshots/DealerList.png"/>
+															</li>
+															<li>
+																<img src="images/ConsultantScreenshots/dealershipPageSC1.png"/>
+															</li>
+															<li>
+																<img src="images/ConsultantScreenshots/ActionPlanSC.png"/>
+															</li>
+															<li>
+																<img src="images/ConsultantScreenshots/RSC.png"/>
+															</li>
+														</ul>
+													</div>
+
+
+														</a>
 														
 														<header>
 															<h3>Project Description</h3> 

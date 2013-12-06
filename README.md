@@ -1,4 +1,0 @@
-Website
-=======
-
-Group Project Websites

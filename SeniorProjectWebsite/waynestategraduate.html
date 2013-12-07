@@ -16,18 +16,29 @@
 		<script src="js/config.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
+		<script src="js/flexslider/js/jquery.flexslider.js"></script>
+		<link rel="stylesheet" href="js/flexslider/css/flexslider.css" />
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
+
+		<script>
+			$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				directionNav: true
+				});
+			});
+		</script>
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 	</head>
 	<body class="left-sidebar">
 
 		<!-- Header Wrapper -->
-			<div id="header-wrapper">
-				<div class="container">
+		<div>
+				<div>
 					<div class="row">
 						<div class="12u">
 						
@@ -35,25 +46,30 @@
 								<section id="header">
 									
 									<!-- Logo -->
-										<h1><a href="#">Graduate Exhibition Registration and Scoring System</a></h1>
+										<a href="http://engineering.wayne.edu/cs/" class="image"><img src="images/waynestatebanner.jpg" /></a>
 									
-									<!-- Nav -->
-										<nav id="nav">
-											<ul>
-												<li><a href="index.html">Home</a></li>
-											</ul>
-										</nav>
-
 								</section>
 
 						</div>
 					</div>
 				</div>
 			</div>
+
 		
 		<!-- Main Wrapper -->
 			<div id="main-wrapper">
 				<div class="container">
+
+					<div class="12u row" style="text-align:center;">
+						<section>
+							<nav id="nav">
+								<ul>
+									<li><a href="index.html"><strong>Home</strong></a></li>
+								</ul>
+							</nav>
+						</section>
+					</div>
+
 					<div class="row">
 						<div class="12u">
 							
@@ -69,7 +85,7 @@
 														<header>
 															<h3>Take a Look Inside</h3>
 														</header>
-														<p>Here is where we would like to show that various functions of the application that we've built. Each picture shows the functions that are most important to the project.</p>
+														<strong>Here is where we would like to show that various functions of the application that we've built. Each picture shows the functions that are most important to the project.</strong>
 														<footer>
 															<a href="waynestategraduate-insideLook.html" class="button alt">Inside View</a>
 														</footer>
@@ -79,7 +95,8 @@
 														<header>
 															<h3>Technologies used</h3>
 														</header>
-														<p>Here are some links to the useful technologies we decided to use to develop our project</p>
+														<strong>Here are some links to the useful technologies we decided to use to develop our project</strong>
+														<footer>
 														<ul class="divided">
 															<li><a>HTML/CSS – WSU CSS attributes</a></li>
 															<li><a href="http://getbootstrap.com/">Bootstrap (Responsive Design)</a></li>
@@ -87,6 +104,7 @@
 															<li><a href="http://www.mysql.com/">MySQL </a></li>
 															<li><a href="http://tomcat.apache.org/">Apache – Tomcat Server</a></li><li><a href="http://cukes.info/">Cucumber BDD Automated Testing</a></li>
 														</ul>
+													</footer>
 													</section>
 
 											</div>
@@ -94,17 +112,35 @@
 												
 												<!-- Content -->
 													<article class="box is-post">
-														<a class="image image-full"><img src="images/WSU_G.jpg" alt="" /></a>
+
+
+														<a class="image image-full">
+															<div class="flexslider">
+														<ul class="slides">
+															<li>
+																<img src="images/WayneStateGraduteScreenShots/homepage.jpg"/>
+															</li>
+															<li>
+																<img src="images/WayneStateGraduteScreenShots/projects_participants.png"/>
+															</li>
+															<li>
+																<img src="images/WayneStateGraduteScreenShots/projectspage.jpg"/>
+															</li>
+															<li>
+																<img src="images/WayneStateGraduteScreenShots/settings.jpg"/>
+															</li>
+														</ul>
+													</div></a>
 														
 														<header>
 															<h3>Project Description</h3> 
 														</header>
-														<p>
+														<strong>
 															The Wayne State University Graduate School is among the 20 largest in the nation. Graduate students often participate in cutting edge research and large scale creative projects in their fields as they work towards earning a master’s degree or a doctorate. Every year in early March, the Wayne State University Graduate School holds an exhibition that features the work of graduate students from the various disciplines in the university. The purpose of the exhibition is "celebrating Wayne State's graduate community and the exciting research, scholarship and creative work of [Wayne State] graduate students."  </br>
 															During the Exhibition, the students participate by presenting a poster, art project or oral presentation that focuses on their research or work. The students' presentations are evaluated by professors who have volunteered to act as judges. The results of the evaluations are used to determine which of the projects will receive awards in several categories at a ceremony at the culmination of the exhibition. </br>
 
 	
-														</p>
+														</strong>
 
 													</article>
 
@@ -119,9 +155,9 @@
 																	<h4>Amanda Taylor</h4>
 																	<a href="#"><img src="images/WayneStateGraduteScreenShots/GroupMemberPhotos/amanda.jpg" alt="" class="center 2u" /></a>
 																	<p class="1u"></p>
-																	<p class="9u">
+																	<strong class="9u">
 																		After graduation, I will be a Quality Analyst at RIIS in Troy, MI where I've been interning since February 2013. Working on this project has sparked an interest in web development, and I hope to continue building sites in my free time. 
-																	</p>															
+																	</strong>															
 																</div>
 															</section>
 															
@@ -130,9 +166,9 @@
 																	<h4>Vishi Dalavayi</h4>
 																	<a href="#"><img src="images/WayneStateGraduteScreenShots/GroupMemberPhotos/vishi.jpg" alt="" class="center 2u" /></a>
 																	<p class="1u"></p>
-																	<p class="9u">
+																	<strong class="9u">
 																		Upon Graduation, I will be a Systems Integration Engineer at Robert Bosch LLC. I will be working on Infotainment Systems. I have developed a passion on embedded touch screen systems and navigation systems and that is what I plan to work on in my career.
-																	</p>															
+																	</strong>															
 																</div>
 															</section>
 
@@ -141,9 +177,9 @@
 																	<h4>Dhaval Dungrani.</h4>
 																	<a href="#"><img src="images/WayneStateGraduteScreenShots/GroupMemberPhotos/dhaval.jpg" alt="" class="center 2u" /></a>
 																	<p class="1u"></p>
-																	<p class="9u">
+																	<strong class="9u">
 																		Hello Everyone, this is Dhaval Dungrani. My passion is in website development and computer technical assisting. I have spent most of the time on development using C/C++, Java and JavaScript, troubleshooting and maintenance for computers at the companies that I worked for in the past.
-																	</p>															
+																	</strong>															
 																</div>
 															</section>
 
@@ -152,8 +188,8 @@
 																	<h4>Plamen Petkov</h4>
 																	<a href="#"><img src="images/WayneStateGraduteScreenShots/GroupMemberPhotos/Plamen.jpg" alt="" class="center 2u" /></a>
 																	<p class="1u"></p>
-																	<p class="9u">
-																		In general, I love technology! I have good experience in writing scripts to automate processes, IT customer and client support and application packaging. 													
+																	<strong class="9u">
+																		In general, I love technology! I have good experience in writing scripts to automate processes, IT customer and client support and application packaging. </strong>													
 																</div>
 															</section>
 														</section>
@@ -172,17 +208,16 @@
 			<div id="footer-wrapper">
 				
 				<!-- Footer -->
-					<section id="footer" class="container">
-												
-						<div class="row">
-							
-							<div class="12u">
-							
-								<section>
-									<header>
-										<h2>CSC 4996 © 2013</h2>
-									</header>
-									
+					<section id="footer" class="container">												
+						<div class="row">							
+							<div class="3u" style="color: #000000">.</div>
+							<div class="6u">
+								<section style="text-align:center; float:left;">
+									<div>Wayne State University, 5057 Woodward Avenue, Suite 14101.1, Detroit, MI 48202</div>
+									<div>Phone: (313) 577-5408 | Fax: (313) 577-6868 | CSC 4996 © 2013</div>
+									<div>Email: <a href="mailto:amarcus@cs.wayne.edu"</a> amarcus@cs.wayne.edu</div>
+								</section>
+							</div>
 						</div>
 					</section>
 				
